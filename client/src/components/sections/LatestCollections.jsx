@@ -6,7 +6,7 @@ import StoreContext from "@/context/StoreContext";
 const LatestCollections = () => {
   const { products } = useContext(StoreContext);
   return (
-    <section className="my-10 sm:my-24 flex flex-col gap-4">
+    <section className="my-14 sm:my-24 flex flex-col gap-4">
       <Title title1={"Latest"} title2={"Collections"} />
       <p className="text-center text-gray-400 w-[80%] mx-auto">
         Lorem Ipsum is simply dummy text of the printing and typesetting
