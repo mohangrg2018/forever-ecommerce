@@ -1,7 +1,5 @@
 import { assets } from "@/assets/assets";
 import Title from "@/components/shared/Title";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
 import StoreContext from "@/context/StoreContext";
 import React, { useContext, useEffect, useState } from "react";
 import {
