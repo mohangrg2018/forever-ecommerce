@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ id, name, price, image }) => {
   const { currency } = useContext(StoreContext);
   return (
-    <Link to={`/product/${id}`}>
+    <Link onClick={() => window.scrollTo(0, 0)} to={`/product/${id}`}>
       <div className="overflow-hidden">
         <img
           src={image}

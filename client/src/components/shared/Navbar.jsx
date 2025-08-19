@@ -1,9 +1,11 @@
 import { assets } from "@/assets/assets";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import StoreContext from "@/context/StoreContext";
 
 const Navbar = () => {
+  const { getCartTotal } = useContext(StoreContext);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   return (
     <header className="container__width">
@@ -49,7 +51,7 @@ const Navbar = () => {
           <div className="relative">
             <img src={assets.cart_icon} className="w-5" alt="" />
             <span className="absolute -bottom-1 -right-2 inline-flex text-[12px] items-center justify-center rounded-full h-4 w-4 text-white bg-primary">
-              0
+              {getCartTotal()}
             </span>
           </div>
           {/* mobile navigation */}

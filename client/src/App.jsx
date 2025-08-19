@@ -7,10 +7,12 @@ import Product from "./pages/Product";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./components/shared/Footer";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
     <>
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -6,11 +6,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Product = () => {
-  const { products, currency } = useContext(StoreContext);
+  const { products, currency, cartItems, addToCart } = useContext(StoreContext);
   const { productId } = useParams();
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState(null);
   const [activeTab, setActiveTab] = useState("description"); // "description" or "reviews"
+  const [size, setSize] = useState("");
 
   useEffect(() => {
     const productsCopy = products.slice();
@@ -89,15 +90,27 @@ const Product = () => {
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold">Select Size</p>
               <div className="flex items-center gap-2">
-                {productData.sizes.map((size, index) => (
-                  <Button variant="outline" key={index}>
-                    {size}
+                {productData.sizes.map((item, index) => (
+                  <Button
+                    onClick={() => setSize(item)}
+                    variant="outline"
+                    key={index}
+                    className={`${
+                      item === size ? "border border-red-400" : ""
+                    }`}
+                  >
+                    {item}
                   </Button>
                 ))}
               </div>
             </div>
 
-            <Button className="px-8">ADD TO CART</Button>
+            <Button
+              onClick={() => addToCart(productData._id, size)}
+              className="px-8"
+            >
+              ADD TO CART
+            </Button>
 
             <hr className="w-2/3 border-1 my-4" />
 
