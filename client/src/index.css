@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -113,8 +114,24 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    /* outfit font */
+    font-family: "Outfit", sans-serif;
   }
   body {
     @apply bg-background text-foreground;
+
+    /* prata google font */
+    .prata-regular {
+      font-family: "Prata", serif;
+    }
+
+    /* default container width */
+    .container__width {
+      @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .active {
+      @apply underline underline-offset-6;
+    }
   }
 }
