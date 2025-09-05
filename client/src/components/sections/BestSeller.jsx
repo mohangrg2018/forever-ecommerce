@@ -18,7 +18,10 @@ const BestSeller = () => {
     <section className="container__width">
       <div className="flex flex-col items-center gap-2">
         <Title title1="best" title2="sellers" />
-        <p className="text-gray-400 text-sm">Lorem ipsum dolor sit amet</p>
+        <p className="text-gray-400 text-sm">
+          Shop the favorites everyone loves – our most popular picks just for
+          you.
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-4">
           {bestSeller.map((item) => (
             <ProductCard

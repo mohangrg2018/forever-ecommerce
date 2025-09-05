@@ -10,7 +10,9 @@ const LatestCollection = () => {
     <section className="container__width">
       <div className="my-12 sm:my-20 flex flex-col items-center gap-2">
         <Title title1="latest" title2="collections" />
-        <p className="text-gray-400">Lorem ipsum dolor sit amet</p>
+        <p className="text-gray-400">
+          Discover our newest arrivals, crafted to keep you ahead in style.
+        </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-4">
           {products.slice(0, 10).map((item) => (
             <ProductCard
