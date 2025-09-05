@@ -6,10 +6,12 @@ import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 import Footer from "./components/shared/footer";
 import Collection from "./pages/Collection";
+import { Toaster } from "sonner";
 
 const App = () => {
   return (
     <>
+      <Toaster />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
