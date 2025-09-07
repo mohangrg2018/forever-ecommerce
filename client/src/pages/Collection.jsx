@@ -68,7 +68,7 @@ const Collection = () => {
   }, [products, category, subCategory, sort]);
 
   return (
-    <div className="container__width">
+    <div className="container__width mb-12 sm:mb-20">
       <div className="border-t border-gray-200 pt-6 sm:pt-8">
         <div className="flex flex-col sm:flex-row gap-6">
           {/* product filters */}
