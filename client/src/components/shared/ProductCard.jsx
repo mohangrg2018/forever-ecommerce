@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ id, image, name, price }) => {
   const { currency } = useContext(StoreContext);
   return (
-    <Link to={`/product/${id}`} className="flex flex-col gap-2">
+    <Link
+      to={`/product/${id}`}
+      onClick={() => window.scrollTo(0, 0)}
+      className="flex flex-col gap-2"
+    >
       <div className="overflow-hidden">
         <img
           src={image}
